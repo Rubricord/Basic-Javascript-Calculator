@@ -37,8 +37,16 @@ function divide() {
   currentResult = currentResult / enteredNumber;
   createAndWriteOutput("/", initialResult, enteredNumber);
 }
+function modulus() {
+  const enteredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult % enteredNumber;
+  createAndWriteOutput("%", initialResult, enteredNumber);
+}
 
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
+modulusBtn.addEventListener("click", modulus);
+
